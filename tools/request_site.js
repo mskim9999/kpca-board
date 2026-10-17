@@ -10,7 +10,6 @@
   var ready = /^https:\/\/script\.google\.com\//.test(APPS_URL);
   btn.textContent = ready ? "요청 보내기" : "요청문 복사";
   function say(t, bad) { msg.textContent = t; msg.setAttribute("data-bad", bad ? "1" : "0"); }
-  try { var w = localStorage.getItem("rqWho"); if (w) $("rqWho").value = w; } catch (e) {}
 
   function vals() {
     return { who: $("rqWho").value.trim(), title: $("rqTitle").value.trim(), kind: $("rqKind").value,
@@ -38,7 +37,6 @@
     var v = vals();
     if (!v.title) { say("글 주제를 적어 주세요.", true); $("rqTitle").focus(); return; }
     if (!v.body) { say("담았으면 하는 내용을 적어 주세요.", true); $("rqBody").focus(); return; }
-    try { localStorage.setItem("rqWho", v.who); } catch (e2) {}
     if (!ready) {
       var t = text(v);
       if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -50,18 +48,15 @@
     btn.disabled = true; say("보내는 중입니다…", false);
     var body = new URLSearchParams(v);
     fetch(APPS_URL, { method: "POST", mode: "no-cors", body: body }).then(function () {
+      f.reset(); out.hidden = true; out.textContent = "";
       say("카페지기에게 보냈습니다. 고맙습니다.", false);
-      ["rqTitle", "rqBody", "rqRef"].forEach(function (id) { $(id).value = ""; });
-      $("rqKind").value = ""; $("rqBoard").value = ""; out.hidden = true;
     }, function () {
       var t = text(v); copyFallback(t);
       say("보내지 못했습니다. 인터넷 연결을 확인하시거나, 아래 글을 복사해 카페지기에게 직접 보내 주세요.", true);
     }).then(function () { btn.disabled = false; });
   });
   $("rqClear").addEventListener("click", function () {
-    ["rqTitle", "rqBody", "rqRef"].forEach(function (id) { $(id).value = ""; });
-    $("rqKind").value = ""; $("rqBoard").value = "";
-    out.hidden = true; out.textContent = ""; say("", false);
+    f.reset(); out.hidden = true; out.textContent = ""; say("", false);
   });
 })();
 </script>
