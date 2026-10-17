@@ -14,7 +14,7 @@
     var lines = ["[게시글 작성 요청] " + d.getFullYear() + "년 " + (d.getMonth() + 1) + "월 " + d.getDate() + "일"];
     if ($("rqWho").value.trim()) lines.push("요청: " + $("rqWho").value.trim());
     lines.push("주제: " + $("rqTitle").value.trim());
-    if ($("rqKind").value) lines.push("갈래: " + $("rqKind").value);
+    if ($("rqKind").value) lines.push("분야: " + $("rqKind").value);
     if ($("rqBoard").value) lines.push("게시판: " + $("rqBoard").value);
     lines.push("", "담을 내용:", $("rqBody").value.trim());
     if ($("rqRef").value.trim()) lines.push("", "참고: " + $("rqRef").value.trim());

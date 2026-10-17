@@ -21,7 +21,7 @@
     var l = ["[게시글 작성 요청] " + d.getFullYear() + "년 " + (d.getMonth() + 1) + "월 " + d.getDate() + "일"];
     if (v.who) l.push("요청: " + v.who);
     l.push("주제: " + v.title);
-    if (v.kind) l.push("갈래: " + v.kind);
+    if (v.kind) l.push("분야: " + v.kind);
     if (v.board) l.push("게시판: " + v.board);
     l.push("", "담을 내용:", v.body);
     if (v.ref) l.push("", "참고: " + v.ref);
