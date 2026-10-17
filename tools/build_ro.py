@@ -140,9 +140,10 @@ s = s.replace('<!-- HUBJS:END -->', '<!-- HUBJS:END -->\n<p class="wrap ro-foot"
 
 # 게시글 작성 요청 칸 (공유용 전용)
 R = os.path.join(S, "ro")
-anchor = '<div role="tabpanel" id="b-post" aria-labelledby="t-post" hidden>\n'
+# 순서: 작성한 글과 후보 → 게시글 작성 요청 → 담당 · 카페글작성 에이전트 (운영자 2026-10-18)
+anchor = '  <section>\n    <div class="eyebrow">담당 · 카페글작성 에이전트</div>'
 assert s.count(anchor) == 1
-s = s.replace(anchor, anchor + open(os.path.join(R, "request_part.html"), encoding="utf-8").read())
+s = s.replace(anchor, open(os.path.join(R, "request_part.html"), encoding="utf-8").read().lstrip("\n") + "\n" + anchor)
 s = s.replace('<!-- HUBJS:END -->', '<!-- HUBJS:END -->' + open(os.path.join(R, "request_part.js"), encoding="utf-8").read(), 1)
 
 first = s.index("<script")
