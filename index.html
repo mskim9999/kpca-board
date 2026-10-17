@@ -970,7 +970,7 @@ body{word-break:keep-all}
   <section class="req" id="req" aria-labelledby="reqH">
     <div class="eyebrow">운영진 요청</div>
     <h2 id="reqH">게시글 작성 요청</h2>
-    <p class="lead">쓰고 싶은 글감을 적고 <strong>요청문 복사</strong>를 누르신 뒤, 카페지기에게 보내 주세요.</p>
+    <p class="lead">쓰고 싶은 글감을 적고 <strong>요청 보내기</strong>를 누르시면 카페지기에게 바로 전달됩니다.</p>
     <form class="req-form" id="reqForm" novalidate>
       <input type="text" id="rqHp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <div class="req-row">
@@ -12961,7 +12961,7 @@ v1 검수가 아래 문장을 가운뎃점으로 바꾸라고 지적했는데 **
 <script>
 /* 게시글 작성 요청 — 카페지기의 구글 시트로 보낸다 (Apps Script 웹 앱) */
 (function () {
-  var APPS_URL = "";
+  var APPS_URL = "https://script.google.com/macros/s/AKfycbx26m1loOFnt8zipsRMuMKImRem53WLfRiq3xUZIFUOUfCM64V79EqT52NrxNemxtYxfQ/exec";
   var f = document.getElementById("reqForm");
   if (!f) return;
   var $ = function (id) { return document.getElementById(id); };
