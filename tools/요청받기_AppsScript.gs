@@ -27,7 +27,7 @@
  */
 
 var SHEET_NAME = "요청";
-var HEAD = ["받은 시각", "요청하는 분", "글 주제", "갈래", "게시판", "담을 내용", "참고 자료", "처리"];
+var HEAD = ["받은 시각", "요청하는 분", "글 주제", "분야", "게시판", "담을 내용", "참고 자료", "처리"];
 var MAX = { who: 60, title: 200, kind: 40, board: 60, body: 4000, ref: 500 };
 var PROPS = PropertiesService.getScriptProperties();
 
@@ -60,7 +60,7 @@ function doPost(e) {
       "",
       "주제: " + v.title,
       "요청: " + (v.who || "(적지 않음)"),
-      "갈래: " + (v.kind || "-") + "  ·  게시판: " + (v.board || "카페지기에게 맡김"),
+      "분야: " + (v.kind || "-") + "  ·  게시판: " + (v.board || "카페지기에게 맡김"),
       "",
       v.body.length > 1500 ? v.body.slice(0, 1500) + "…(시트에서 전체 보기)" : v.body,
       v.ref ? "\n참고: " + v.ref : "",
