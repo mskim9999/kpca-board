@@ -37,7 +37,9 @@ s = re.sub(r'<div class="lane">\s*<h3>영양 · 화학항암 부작용.*?</div>(
 s = re.sub(r'<script type="text/plain" class="doc" data-key="cmt-folfi".*?</script>\n?', "", s, count=1, flags=re.S)
 s = s.replace("2026-09-09 댓글 「폴피리녹스 1차 후 못 드심」", "2026-09-09 회원 댓글 답글")
 s = s.replace("되묻기 4개 — 입 헐음·구역질·맛·변", "되묻기 4개")
-left = [w for w in ("별아해", "폴피리녹스", "보호자 작성", "입 헐음") if w in s]
+# 볼트 카드 「움직임」 — 같은 회원 사례의 걸음 수
+s = s.replace("걸음 수는 사람마다 다르다. 사례에는 7,000 → 14,000보로 늘린 경우가 있다", "걸음 수는 사람마다 다르다")
+left = [w for w in ("별아해", "폴피리녹스", "보호자 작성", "입 헐음", "14,000") if w in s]
 assert not left, "회원 사례가 남았다: " + ", ".join(left)
 
 # 1. 요청 칸 — 복사 대신 구글 시트로 보낸다
