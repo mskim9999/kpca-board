@@ -1,6 +1,6 @@
 # 인수인계 — 한국췌장암환우협회 제4기 상황판
 
-최종 정리: 2026-10-18 (claude.ai 클라우드 세션에서 작성)
+최종 정리: 2026-10-18 (claude.ai 클라우드 세션에서 작성) · 같은 날 회사 PC 터미널 세션이 공유용·예전 시안 삭제와 회원 사례 빼기를 반영 — 규칙은 `CLAUDE.md`
 이 문서를 읽은 Claude 는 아래 내용을 전제로 이어서 작업한다.
 
 ---
@@ -10,11 +10,9 @@
 | 이름 | 위치 | 누가 보나 | 성격 |
 |---|---|---|---|
 | **작업용 상황판** (원본) | claude.ai 아티팩트 `https://claude.ai/artifact/Mz9D8cYCQKpJPRNsJeCCEv` (제목 「협회 운영 상황판」) | 카페지기 본인 | 저장소(db)·본문 작성(sample)·댓글·자산이 붙은 실제 작업 화면. 모든 수정은 여기서 시작 |
-| **공유용 상황판** | claude.ai 아티팩트 `https://claude.ai/artifact/Q1uxw8Lj9xoZFHypVDCFAD` (제목 「제4기 상황판 공유용」) | 링크가 있는 누구나 | 작업용을 옮겨 담은 읽기 전용 사본. 저장 기능 없음 |
+| ~~공유용 상황판~~ | (2026-10-18 삭제 — 사이트가 같은 일을 한다) | — | — |
 | **운영진 사이트** | `https://mskim9999.github.io/kpca-board/` ← 저장소 `mskim9999/kpca-board` (main 브랜치 루트, GitHub Pages) | 주소를 아는 운영진 | 공유용과 같은 내용 + 「게시글 작성 요청」이 실제로 전송됨. 검색엔진 차단 |
 | **요청 받는 곳** | 카페지기 구글 시트 「게시글 작성 요청」의 「요청」 탭 + Apps Script 웹 앱 | 카페지기 | 사이트 요청이 한 줄씩 쌓이고 텔레그램 봇으로 알림 |
-| 예전 「제4기 상황판」 | `https://claude.ai/artifact/Lv6xQUfajAZyaHp1jMD7jE` | — | 처음에 따로 만든 시안. 더 이상 쓰지 않음(카페지기 확인 후 삭제 가능) |
-| 「협회 운영 원칙」 캔버스 | `https://claude.ai/artifact/VAZSgMUS3Jnd196rDNXUNh` | — | 초기 시안. 쓰지 않음 |
 
 Apps Script 웹 앱 URL (사이트가 요청을 보내는 곳, 공개돼도 됨):
 `https://script.google.com/macros/s/AKfycbx26m1loOFnt8zipsRMuMKImRem53WLfRiq3xUZIFUOUfCM64V79EqT52NrxNemxtYxfQ/exec`
