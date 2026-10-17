@@ -1,0 +1,42 @@
+
+  <!-- REQ:BEGIN 공유용 전용 — 게시글 작성 요청 (저장소가 없어 요청문을 만들어 복사한다) -->
+  <section class="req" id="req" aria-labelledby="reqH">
+    <div class="eyebrow">운영진 요청</div>
+    <h2 id="reqH">게시글 작성 요청</h2>
+    <p class="lead">쓰고 싶은 글감을 적고 <strong>요청문 복사</strong>를 누르신 뒤, 카페지기에게 카톡이나 문자로 붙여 보내 주세요.
+      이 화면은 저장이 되지 않아 여기 적은 내용이 저절로 전달되지는 않습니다.</p>
+    <form class="req-form" id="reqForm" novalidate>
+      <div class="req-row">
+        <label class="req-f"><span>요청하는 분</span>
+          <input type="text" id="rqWho" autocomplete="name" placeholder="예: 운영진 홍길동"></label>
+        <label class="req-f"><span>갈래</span>
+          <select id="rqKind">
+            <option value="">고르지 않음</option>
+            <option>건강 유지 팁</option><option>동향 파악</option>
+            <option>계절 변화 관리</option><option>협회 소식</option>
+          </select></label>
+        <label class="req-f"><span>올릴 게시판 <em>선택</em></span>
+          <select id="rqBoard">
+            <option value="">카페지기에게 맡김</option>
+            <option>056 증상정보교환</option><option>059 암관련 좋은정보</option>
+            <option>055 음식과섭생이야기</option><option>041 사랑기쁨감사애환</option>
+            <option>054 현대의학 질의응답</option><option>043 웰다잉</option>
+            <option>033 최근암소식/유익한정보</option><option>012 카페에서 알립니다</option>
+            <option>053 자연대체의학 질의응답</option>
+          </select></label>
+      </div>
+      <label class="req-f"><span>글 주제 또는 제목 <b>필수</b></span>
+        <input type="text" id="rqTitle" placeholder="예: 항암 중 입맛이 없을 때 끼니를 잇는 법"></label>
+      <label class="req-f"><span>꼭 담았으면 하는 내용 <b>필수</b></span>
+        <textarea id="rqBody" rows="5" placeholder="왜 이 글이 필요한지, 꼭 들어갔으면 하는 이야기, 피했으면 하는 표현 등을 편하게 적어 주세요."></textarea></label>
+      <label class="req-f"><span>참고 자료 <em>선택</em></span>
+        <input type="text" id="rqRef" placeholder="책 이름, 방송, 카페 글 번호, 링크 등"></label>
+      <div class="req-act">
+        <button type="submit" class="btn" id="rqCopy">요청문 복사</button>
+        <button type="button" class="btn plain" id="rqClear">새로 쓰기</button>
+        <span class="req-msg" id="rqMsg" aria-live="polite"></span>
+      </div>
+      <pre class="req-out" id="rqOut" hidden></pre>
+    </form>
+  </section>
+  <!-- REQ:END -->
