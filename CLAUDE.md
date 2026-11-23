@@ -1,6 +1,6 @@
 # 운영진 사이트 (kpca-board)
 
-한국췌장암환우협회 작업용 상황판(claude.ai 아티팩트 `Mz9D8cYCQKpJPRNsJeCCEv`)을 옮겨 담은 정적 사이트다.
+한국췌장암환우협회 작업용 상황판(claude.ai 아티팩트 `Wm5fUEivw7tqnWxig1PTBG`)을 옮겨 담은 정적 사이트다.
 자세한 구조와 내력은 `HANDOFF.md`.
 
 ## 갱신

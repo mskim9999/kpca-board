@@ -1,6 +1,6 @@
 # 사이트 갱신 도구
 
-작업용 상황판(claude.ai 아티팩트 Mz9D8cYCQKpJPRNsJeCCEv)에서 사이트를 다시 만드는 순서.
+작업용 상황판(claude.ai 아티팩트 Wm5fUEivw7tqnWxig1PTBG)에서 사이트를 다시 만드는 순서.
 
 1. 작업용 상황판 페이지를 `hub/index.html` 로, 저장소 내용을 `dbdump/<컬렉션>/<문서>.json` 으로 내려받는다
    (컬렉션: hub, posted, writereq, reviews, agentdoc). 글꼴 파일 4개는 `artifact-files/…/` 에 둔다.

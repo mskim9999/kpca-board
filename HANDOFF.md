@@ -9,7 +9,7 @@
 
 | 이름 | 위치 | 누가 보나 | 성격 |
 |---|---|---|---|
-| **작업용 상황판** (원본) | claude.ai 아티팩트 `https://claude.ai/artifact/Mz9D8cYCQKpJPRNsJeCCEv` (제목 「협회 운영 상황판」) | 카페지기 본인 | 저장소(db)·본문 작성(sample)·댓글·자산이 붙은 실제 작업 화면. 모든 수정은 여기서 시작 |
+| **작업용 상황판** (원본) | claude.ai 아티팩트 `https://claude.ai/artifact/Wm5fUEivw7tqnWxig1PTBG` (제목 「협회 운영 상황판」) | 카페지기 본인 | 저장소(db)·본문 작성(sample)·댓글·자산이 붙은 실제 작업 화면. 모든 수정은 여기서 시작 |
 | ~~공유용 상황판~~ | (2026-10-18 삭제 — 사이트가 같은 일을 한다) | — | — |
 | **운영진 사이트** | `https://mskim9999.github.io/kpca-board/` ← 저장소 `mskim9999/kpca-board` (main 브랜치 루트, GitHub Pages) | 주소를 아는 운영진 | 공유용과 같은 내용 + 「게시글 작성 요청」이 실제로 전송됨. 검색엔진 차단 |
 | **요청 받는 곳** | 카페지기 구글 시트 「게시글 작성 요청」의 「요청」 탭 + Apps Script 웹 앱 | 카페지기 | 사이트 요청이 한 줄씩 쌓이고 텔레그램 봇으로 알림 |
@@ -81,7 +81,7 @@ Apps Script 웹 앱 URL (사이트가 요청을 보내는 곳, 공개돼도 됨)
 
 카페지기가 「공유용 갱신해줘」「사이트 갱신해줘」라고 하면:
 
-1. 작업용 상황판 최신본을 받는다: `Artifact read url=…Mz9D8cYCQKpJPRNsJeCCEv path=index.html` → `hub/index.html`
+1. 작업용 상황판 최신본을 받는다: `Artifact read url=…Wm5fUEivw7tqnWxig1PTBG path=index.html` → `hub/index.html`
 2. db 를 받는다: `ArtifactData list` 로 `hub`, `posted`, `writereq`, `reviews`, `agentdoc` 를 `out_dir=dbdump` 로
 3. 글꼴 4개를 받는다: `Artifact read path=<위 자산 id>` → `artifact-files/a9f13a27-6d23-4f7f-9514-de754659eb5b/<id>.ttf`
    (스크립트가 기대하는 폴더 배치: 작업 폴더 아래 `hub/`, `dbdump/`, `artifact-files/…/`, `ro/`(도구들), `site/`)
